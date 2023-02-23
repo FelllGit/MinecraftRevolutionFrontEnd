@@ -24,7 +24,6 @@ async function logoutUser() {
         const token = localStorage.getItem("token");
         // Відправити запит POST на знехтування токену
         await axios.post("http://localhost:80/api/logout", { token });
-        // Видалити токен з локального сховища
     } catch (error) {
         console.error(error);
     }

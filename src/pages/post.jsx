@@ -3,13 +3,8 @@ import { useParams, useLocation } from "react-router-dom";
 
 import getPost from "./../getInfo/getPostInfo";
 
-const Post = ({ setLocation }) => {
-    try {
-    const location = useLocation();
-    setLocation(location.pathname);
-    } catch(error){
-        throw error;
-    }
+const Post = ({ }) => {
+    
     useEffect(() => {
         if (
             document.getElementById("container") &&
@@ -35,7 +30,7 @@ const Post = ({ setLocation }) => {
     }, [id]);
 
     return post ? (
-        <div className="post">
+        <div className="postPage">
             <div className="postHeader">
                 <h1>{post.name}</h1>
                 <small>
